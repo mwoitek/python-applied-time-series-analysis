@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 75
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 75
+force_single_line = true
+treat_comments_as_code = ["# %%"]
+
+[tool.pyright]
+stubPath = "/home/woitek/python-type-stubs"
+useLibraryCodeForTypes = true
+analyzeUnannotatedFunctions = false
+reportUnusedExpression = false
+reportUnnecessaryCast = "information"
+reportUnnecessaryTypeIgnoreComment = "information"
