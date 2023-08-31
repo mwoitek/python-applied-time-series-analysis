@@ -26,16 +26,14 @@ MA2_process = ArmaProcess(ar2, ma2).generate_sample(nsample=1000)
 # %%
 plt.plot(MA2_process)
 plt.title("Moving Average Process of Order 2")
-plt.show()
 
 # %%
 plt.plot(MA2_process)
 plt.title("Moving Average Process of Order 2")
 plt.xlim(0, 200)
-plt.show()
 
 # %%
-plot_acf(MA2_process, lags=20, auto_ylims=True)
+plot_acf(MA2_process, lags=20, auto_ylims=True);  # fmt: skip
 
 # %%
 MA_model = ARIMA(

@@ -30,13 +30,12 @@ AR2_process = ArmaProcess(ar2, ma2).generate_sample(nsample=1000)
 plt.plot(AR2_process)
 plt.title("Simulated AR(2) Process")
 plt.xlim(0, 200)
-plt.show()
 
 # %%
-plot_acf(AR2_process, auto_ylims=True)
+plot_acf(AR2_process, auto_ylims=True);  # fmt: skip
 
 # %%
-plot_pacf(AR2_process, auto_ylims=True)
+plot_pacf(AR2_process, auto_ylims=True);  # fmt: skip
 
 # %%
 rho, sigma = yule_walker(AR2_process, 2, method="mle")
@@ -59,13 +58,12 @@ AR3_process = ArmaProcess(ar3, ma3).generate_sample(nsample=10000)
 plt.plot(AR3_process)
 plt.title("Simulated AR(3) Process")
 plt.xlim(0, 200)
-plt.show()
 
 # %%
-plot_acf(AR3_process, auto_ylims=True)
+plot_acf(AR3_process, auto_ylims=True);  # fmt: skip
 
 # %%
-plot_pacf(AR3_process, auto_ylims=True)
+plot_pacf(AR3_process, auto_ylims=True);  # fmt: skip
 
 # %%
 rho, sigma = yule_walker(AR3_process, 3, method="mle")
@@ -86,7 +84,6 @@ plt.title("Quarterly EPS for J&J")
 plt.xlabel("Date")
 plt.ylabel("EPS ($)")
 plt.xticks(rotation=90)
-plt.show()
 
 # %%
 # Take the log difference
@@ -98,7 +95,6 @@ data.head()
 # %%
 plt.plot(data["data"])
 plt.title("Log Difference of Quarterly EPS for J&J")
-plt.show()
 
 # %%
 ad_fuller_result = adfuller(data["data"])
@@ -106,10 +102,10 @@ print(f"ADF Statistic: {ad_fuller_result[0]}")
 print(f"p-value: {ad_fuller_result[1]}")
 
 # %%
-plot_acf(data["data"], auto_ylims=True)
+plot_acf(data["data"], auto_ylims=True);  # fmt: skip
 
 # %%
-plot_pacf(data["data"], auto_ylims=True)
+plot_pacf(data["data"], auto_ylims=True);  # fmt: skip
 
 # %%
 # Try AR(4)

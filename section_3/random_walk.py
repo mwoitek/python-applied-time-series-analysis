@@ -29,14 +29,13 @@ random_walk[:10]
 # %%
 plt.plot(random_walk)
 plt.title("Simulated Random Walk")
-plt.show()
 
 # %%
 random_walk_acf_coef = acf(random_walk)
 random_walk_acf_coef
 
 # %%
-plot_acf(random_walk, lags=20, auto_ylims=True)
+plot_acf(random_walk, lags=20, auto_ylims=True);  # fmt: skip
 
 # %%
 random_walk_diff = np.diff(random_walk, n=1)
@@ -44,7 +43,6 @@ random_walk_diff = np.diff(random_walk, n=1)
 # %%
 plt.plot(random_walk_diff)
 plt.title("Noise")
-plt.show()
 
 # %%
-plot_acf(random_walk_diff, lags=20, auto_ylims=True)
+plot_acf(random_walk_diff, lags=20, auto_ylims=True);  # fmt: skip
